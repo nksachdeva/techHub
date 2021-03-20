@@ -1,0 +1,31 @@
+/* .main-content{
+    display: flex;
+    position: absolute;
+    top: 60px;
+} */
+
+body{
+    margin: 0px;
+}
+
+.layout{
+    display: flex;
+    margin-top: 60px;
+}
+
+.layout-left{
+    width: 75%;
+    /* width: calc(100% - 300px); */
+}
+
+.layout-right{
+    /* min-width: 250px; */
+    width: 25%;
+    background-color: #EBEDEF;
+    height: auto;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    bottom: 0px;
+    /* overflow: scroll; */
+}

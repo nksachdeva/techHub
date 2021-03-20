@@ -1,0 +1,52 @@
+.navbar{
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* position: relative;
+    right: -17px; */
+}
+
+.navbar::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.menu{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    color: #566573;
+    padding-top: 60px;
+    padding-left: 40px;
+}
+
+.menu-item{
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    margin:10px 0px;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    color: black;
+}
+
+.menu-item:hover > .drop-sign{
+    border-color: black;
+}
+
+.drop-sign{
+    align-self: center;
+    margin-left: 10px;
+    width:7px;
+    height: 7px;
+    border-width: 0px 3px 3px 0px;
+    border-style: solid;
+    border-color: #566573;
+    transform: rotate(45deg);
+}
+
+/* .drop-sign:hover{
+    border-color: black;
+} */
