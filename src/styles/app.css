@@ -21,11 +21,14 @@ body{
 .layout-right{
     /* min-width: 250px; */
     width: 25%;
-    background-color: #EBEDEF;
+    /* background-color: #EBEDEF; */
+    background-color: #F7F7F7;
     height: auto;
     position: fixed;
     top: 60px;
     right: 0px;
     bottom: 0px;
+
+    border-left: 1px solid #ececec;
     /* overflow: scroll; */
 }

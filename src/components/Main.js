@@ -12,7 +12,7 @@ function Main(props){
     return (
         <div className="main">
             <div id="page-root">
-                <PageHeader>Main Heading</PageHeader>
+                <PageHeader>Introduction</PageHeader>
                 <Header>Heading</Header>
                 <TextContent>some text here...</TextContent>
                 <SubHeader>Sub Heading</SubHeader>
