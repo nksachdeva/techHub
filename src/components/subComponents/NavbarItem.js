@@ -4,7 +4,7 @@ import '../../styles/navbar.css';
 
 function NavbarItem(props) {
 
-    
+
 
     const onMenuItemClick = (e, key) => {
         console.log(key);
@@ -22,10 +22,20 @@ function NavbarItem(props) {
             </button> */}
 
             <label htmlFor={`radioItem${props.item.id}`} className="menu-item">
-                <div onClick={e => onMenuItemClick(e, props.item.id)} >{props.item.name}</div>
-                <div className="drop-sign"></div>
+                <div
+                    onClick={() => props.onChangeHandler(props.item.id)}
+                    className={(props.selectedOption === props.item.id) ? "active" : ""}
+                >{props.item.name}</div>
+                <div
+                    className={(props.selectedOption === props.item.id) ? "active drop-sign" : "drop-sign"}
+                ></div>
             </label>
-            <input type="radio" name="menuradios" id={`radioItem${props.item.id}`} />
+            <input type="radio"
+                checked={props.selectedOption === props.item.id}
+                // onChange={()=>props.onChangeHandler(props.item.id)}
+                readOnly={true}
+                name="menuradios"
+                id={`radioItem${props.item.id}`} />
             <div id={`panel${props.item.id}`} className="panel">
                 <ul>
                     {

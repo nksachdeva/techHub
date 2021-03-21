@@ -39,6 +39,34 @@
     color:  #61dafb;
 }
 
+/* #search{
+    background-color: #17202A;
+    border: none;
+} */
+
+input:focus#search{
+    outline: none;
+}
+
+.search-bar{
+    margin: auto 20px auto 0px;
+    
+    
+}
+
+::placeholder{
+    color: white;
+}
+
+.git-logo{
+    padding: 15px 0px;
+}
+
+#git-icon{
+    height: 30px;
+    margin: auto 10px;
+}
+
 .menu-items{
     /* width: 100%; */
     display: flex;
@@ -56,10 +84,8 @@
    cursor: pointer;
 }
 
-.search-bar{
-    margin: auto 20px auto 0px;
-    
-}
+
+
 
 /* 
 div{

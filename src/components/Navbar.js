@@ -8,6 +8,7 @@ import '../styles/navbar.css';
 function NavBar(props) {
 
     const [menuitems, setMenuItems] = useState([]);
+    const [selectedMenu, setSelectedMenu] = useState(-1);
 
     useEffect(() => {
         console.log('mounted');
@@ -16,6 +17,18 @@ function NavBar(props) {
 
         return () => console.log('unmounting....');
     }, []);
+
+    const onChangeHandler = (id) => {
+        console.log(`clicked id vs current id: ${id} vs ${selectedMenu}`);
+        if (selectedMenu === id) {
+            console.log('Match!!!!')
+            setSelectedMenu(-1);
+        } else {
+
+            setSelectedMenu(id);
+        }
+
+    };
 
     const fetchMenu = () => {
         setMenuItems(getMenuItems());
@@ -26,7 +39,11 @@ function NavBar(props) {
             <div className="menu">
                 {
                     menuitems.map(item => {
-                        return <NavbarItem key={item.id} item={item} />
+                        return <NavbarItem
+                            key={item.id}
+                            selectedOption={selectedMenu}
+                            onChangeHandler={onChangeHandler}
+                            item={item} />
                     })
                 }
             </div>
