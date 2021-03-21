@@ -67,6 +67,15 @@
     overflow: hidden;
 }
 
+input[type="radio"]{
+    display: none;
+    overflow: hidden;
+}
+
+input:checked ~ .panel{
+    display: block;
+}
+
 .panel > ul {
     list-style-type: none;
     padding: 0px;
@@ -79,6 +88,7 @@
 .panel > ul > li {
     line-height: 2;
 }
+
 
 
 /* .drop-sign:hover{

@@ -26,17 +26,9 @@ function NavBar(props) {
             <div className="menu">
                 {
                     menuitems.map(item => {
-                        return <NavbarItem item={item} />
+                        return <NavbarItem key={item.id} item={item} />
                     })
                 }
-
-                {/* <NavbarItem id="1" item="Introduction" /> */}
-                {/* <NavbarItem id={Object.keys(menuitems)[0]} item={menuitems[1].name} /> */}
-                {/* <NavbarItem id="2" item="Main Concepts" />
-                <NavbarItem id="3" item="Advanced Guides" />
-                <NavbarItem id="4" item="API Reference" />
-                <NavbarItem id="5" item="Misc" />
-                <NavbarItem id="6" item="Testing" /> */}
             </div>
         </div>
     );
