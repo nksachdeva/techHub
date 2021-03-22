@@ -32,11 +32,23 @@
 .menu-item{
     display: flex;
     justify-content: flex-start;
-    width: auto;
+    /* width: auto; */
+    width: fit-content;
     /* margin:10px 0px; */
     margin-left: 15px;
     cursor: pointer;
+    padding: 0px 5px;
+    /* Below css to enable border around selected menu-item */
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
 }
+
+/* >>Enable border aroudn selected .menu-item */
+/* .menu-item.active{
+    border-color: black;
+    border-radius: 5%;
+} */
 
 .active, .menu-item:hover{
     color: black;
@@ -79,7 +91,7 @@ input:checked ~ .panel{
 .panel > ul {
     list-style-type: none;
     padding: 0px;
-    margin: 0px 10px;
+    margin: 10px 10px;
     font-weight: lighter;
     font-size: small;
     color: #1A1A1A;

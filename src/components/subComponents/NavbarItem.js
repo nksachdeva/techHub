@@ -5,11 +5,6 @@ import '../../styles/navbar.css';
 function NavbarItem(props) {
 
 
-
-    const onMenuItemClick = (e, key) => {
-        console.log(key);
-    }
-
     return (
         <div>
             {/* <div className="menu-item">
@@ -21,9 +16,12 @@ function NavbarItem(props) {
                 <div className="drop-sign"></div>
             </button> */}
 
-            <label htmlFor={`radioItem${props.item.id}`} className="menu-item">
+            <label
+                onClick={() => props.onChangeHandler(props.item.id)}
+                htmlFor={`radioItem${props.item.id}`}
+                className={(props.selectedOption === props.item.id) ? "menu-item active" : "menu-item"}
+            >
                 <div
-                    onClick={() => props.onChangeHandler(props.item.id)}
                     className={(props.selectedOption === props.item.id) ? "active" : ""}
                 >{props.item.name}</div>
                 <div

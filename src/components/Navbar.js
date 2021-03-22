@@ -19,9 +19,8 @@ function NavBar(props) {
     }, []);
 
     const onChangeHandler = (id) => {
-        console.log(`clicked id vs current id: ${id} vs ${selectedMenu}`);
+        
         if (selectedMenu === id) {
-            console.log('Match!!!!')
             setSelectedMenu(-1);
         } else {
 
