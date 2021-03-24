@@ -25,16 +25,61 @@ body{
     }
 }
 
+.nav-button{
+    display: none;
+    overflow: hidden;
+}
+
+polyline{
+    fill:none;
+    stroke:#61dafb;
+    stroke-width: 2.5;
+    transition: transform 0.5s;
+}
+
+
+#poly1.active{
+    transform: translateY(-12px);
+}
+
+#poly2.active{
+    transform: translateY(12px);    
+}
+
+
 @media (max-width: 600px){
     .layout-right{
         display: none;
         overflow: hidden;
     }
 
+    .layout-right.nav-bar-active{
+        width: 100%;
+        display: flex;   
+    }
+
     .layout-left{
         margin-right: 0px;
     }
+
+    .nav-button{
+        position: fixed;
+        display: block;
+        
+        width: 60px;
+        height: 60px;
+        bottom: 45px;
+        right: 20px;
+        border-style: solid;
+        border-color: grey;
+        border-width: 1px;
+        border-radius: 50%;
+        background-color: #17202A;
+        box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+    }
 }
+
+
 
 .layout-right{
     min-width: 220px;
