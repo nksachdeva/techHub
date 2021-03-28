@@ -10,3 +10,8 @@ An app which you can refer for quality content.
 ### `Nodejs`
 ### `Javascript`
 ### `NO CSS libraries`
+
+
+## App Hosting
+
+Refer the url of the app hosted on Heroku: [https://techhub-naveen.herokuapp.com](https://techhub-naveen.herokuapp.com)
