@@ -15,7 +15,11 @@ app.get("/mytest", (req, res) => {
 
     res.header("Content-Type", "application/json");
     res.header("Access-Control-Allow-Origin", "*");
-    res.sendFile(path.join(datapath, "mainContent.json"));
+
+    setTimeout(()=>{
+        res.sendFile(path.join(datapath, "mainContent.json"));
+    },1000)
+    // res.sendFile(path.join(datapath, "mainContent.json"));
 })
 
 
