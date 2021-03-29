@@ -16,11 +16,11 @@ function Main(props) {
 
     useEffect(() => {
         fetchContent();
-    }, []);
+    });
 
-    const fetchContent = () => {
-        setContent(getMainContent());
-        // console.log(content)
+    const fetchContent = async () => {
+        const maincontent = await getMainContent();
+        setContent(maincontent.data);
     };
 
     const renderContent = () => {
