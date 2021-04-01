@@ -16,7 +16,7 @@ function Main(props) {
 
     useEffect(() => {
         fetchContent();
-    });
+    },[]);
 
     const fetchContent = async () => {
         const maincontent = await getMainContent();
