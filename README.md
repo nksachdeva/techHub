@@ -14,4 +14,4 @@ An app which you can refer for quality content.
 
 ## App Hosting
 
-Refer the url of the app hosted on Heroku: [https://techhub-naveen.herokuapp.com](https://techhub-naveen.herokuapp.com)
+Refer the url of the app hosted on Heroku: [https://techhub-dev-app.azurewebsites.net/](https://techhub-dev-app.azurewebsites.net/)
