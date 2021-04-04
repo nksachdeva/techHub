@@ -8,7 +8,7 @@ import TextContent from "./helperComponents/Main/TextContent";
 import { getMainContent } from "../api/mainContent";
 
 import '../styles/main.css';
-
+import spinner from '../images/Spinner.svg';
 
 function Main(props) {
 
@@ -16,11 +16,11 @@ function Main(props) {
 
     useEffect(() => {
         fetchContent();
-    }, []);
+    },[]);
 
-    const fetchContent = () => {
-        setContent(getMainContent());
-        // console.log(content)
+    const fetchContent = async () => {
+        const maincontent = await getMainContent();
+        setContent(maincontent.data);
     };
 
     const renderContent = () => {
@@ -51,7 +51,11 @@ function Main(props) {
             </div>
         );
     } else {
-        return <div>Loading....</div>
+        return <div className="main">
+            <div id="page-root">
+                <object className="spinner" type="image/svg+xml" data={spinner} />
+            </div>
+        </div>
     }
 };
 
